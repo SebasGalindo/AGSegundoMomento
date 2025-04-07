@@ -1,0 +1,11 @@
+[server]
+headless = true
+runOnSave = true
+allowRunOnSave = true
+fileWatcherType = "auto"
+
+[theme]
+primaryColor="#b381e4"
+backgroundColor="#353537"
+secondaryBackgroundColor="#4d407d"
+textColor="#d2bbd4"
