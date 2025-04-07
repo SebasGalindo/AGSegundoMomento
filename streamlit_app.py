@@ -2,11 +2,11 @@ import streamlit as st
 
 pages = {
     "Principal": [
-        st.Page("homepage.py", title="Tomate ResNet"),
-        st.Page("test_AG.py", title="Prueba de Clasificación"),
+        st.Page("homepage.py", title="Taller Segundo Momento AG"),
+        st.Page("test_AG.py", title="Prueba del AGA"),
     ],
     "Explicaciones": [
-        st.Page("explanation.py", title="Explicación del Dataset"),
+        st.Page("explanation.py", title="Explicación del Algoritmo Genético Adaptativo"),
     ],
 }
 

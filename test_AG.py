@@ -83,7 +83,9 @@ if st.button("▶️ Ejecutar GA"):
     st.line_chart(df)
 
     # Mostrar población y mejor por generación
-    for i, (pop, best) in enumerate(zip(result["populations"], result["bests"])):
+    for i, (pop, best, history) in enumerate(zip(result["populations"], result["bests"], result["history"])):
         st.markdown(f"#### Generación {i+1} ")
+        st.markdown(f"$p_c =$ {round(history[0],4)}")
+        st.markdown(f"$p_c =$ {round(history[1],4)}")
         st.write("Población:", [round(d,2) for d in pop])
         st.markdown(f"##### Mejor individuo: `{round(best,2)}`")
