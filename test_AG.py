@@ -75,6 +75,7 @@ if st.button("▶️ Ejecutar GA"):
     )
 
     st.success("✅ Ejecución completada")
+    st.write("**Distancia Ideal (mm):**", round(result["target"],2))
     st.write("**Mejor individuo (distancia mm):**", round(result["best"],2))
     st.write("**Error (mm):**", round(result["fitness"],2))
 

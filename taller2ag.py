@@ -157,6 +157,7 @@ def genetic_algorithm(
 
     best = best_history[-1]
     return {
+        "target": target,
         "best": best,
         "fitness": fitness(best, target),
         "history": history,
