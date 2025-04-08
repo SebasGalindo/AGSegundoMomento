@@ -92,7 +92,7 @@ def genetic_algorithm(
     winter_solar_decline:float=-23.45,
     summer_solar_decline:float=23.45,
     # adaptación
-    diversity_method:str="diversity",      # "diversity" o "fitness"
+    adaptation_method:str="diversity",      # "diversity" o "fitness"
     pm_min:float=0.1, pm_max:float=0.4,
     pc_min:float=0.3, pc_max:float=0.7,
     k_m:float=0.035, k_c:float=0.08,
@@ -114,7 +114,7 @@ def genetic_algorithm(
     target = min_distance(panel_dimensions, latitude, inclination_degree, sd)
 
     poblacion = create_poblation(len_poblation, valor_min, valor_max)
-    fit_prev = avg_fitness(poblacion, target) if diversity_method=="fitness" else None
+    fit_prev = avg_fitness(poblacion, target) if adaptation_method=="fitness" else None
 
     history = []
     pop_history = []
@@ -123,7 +123,7 @@ def genetic_algorithm(
         pop_history.append(poblacion.copy())
         best_curr = ranking_selection(poblacion, target, 1.0)
         best_history.append(best_curr)
-        if diversity_method=="diversity":
+        if adaptation_method=="diversity":
             pm, pc = diversity_adaptation(poblacion, pm_min, pm_max, pc_min, pc_max, k_m, k_c)
         else:
             fit_curr = avg_fitness(poblacion, target)
