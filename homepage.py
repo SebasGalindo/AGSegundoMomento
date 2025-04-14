@@ -42,5 +42,5 @@ st. markdown("""
             • Documentación clara del código y explicación del modelo utilizado. 
             """)
 
-st.write("Link Del Documento:")
+st.write("Link Del Documento: https://github.com/SebasGalindo/AGSegundoMomento/blob/main/IEEE_TallerAGA_2Momento.pdf")
 st.write("Link Del Repositorio: https://github.com/SebasGalindo/AGSegundoMomento")
